@@ -60,14 +60,14 @@ router.post(
         const newTodo = {};
         if(title){newTodo.title=title}
         if(task){newTodo.task=task}
-        if(isComplete){newTodo.isComplete=isComplete}
+        if(isComplete !== undefined){newTodo.isComplete=isComplete}
   
   
         //find the note by id
         let todo= await Todo.findById(req.params.id);
         if(!todo)
         {
-            res.status(404).send("Not Found")
+            return res.status(404).send("Not Found")
         }
         if(todo.user.toString() !==req.user.id){
             return res.status(401).send("Not allowed");
@@ -94,7 +94,7 @@ router.delete(
         let todo= await Todo.findById(req.params.id);
         if(!todo)
         {
-            res.status(404).send("Not Found")
+            return res.status(404).send("Not Found")
         }
 
         // allow deletion 

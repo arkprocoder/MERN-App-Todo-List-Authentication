@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Alert from './Alert';
 import { useNavigate  } from 'react-router-dom'
 
 function Login(props) {
@@ -53,7 +52,6 @@ function Login(props) {
           <div className="col-md-4">
 
           <div className="display-4 text-center">Login</div>
-          <Alert alert={alert} />
             <br />
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
@@ -62,7 +60,7 @@ function Login(props) {
                
               </div>
               <div className="mb-3">
-                <label htmlFor="password" value={credentials.password} onChange={onChange}  className="form-label"><i className="fa-solid fa-key"></i> Password</label>
+                <label htmlFor="password" className="form-label"><i className="fa-solid fa-key"></i> Password</label>
                 <input type="password" className="form-control" value={credentials.password} name="password" id="password" onChange={onChange} minLength={5} required />
               </div>
              

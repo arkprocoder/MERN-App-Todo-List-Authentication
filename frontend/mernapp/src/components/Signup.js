@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Alert from "./Alert";
 import { useNavigate } from "react-router-dom";
 
 function Signup(props) {
@@ -60,7 +59,6 @@ function Signup(props) {
           <div className="col-md-4">
             <div className="display-4 text-center">SignUp</div>
             <br />
-            <Alert alert={alert} />
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
@@ -117,7 +115,7 @@ function Signup(props) {
                   <i className="fa-solid fa-lock"></i> Confirm Password
                 </label>
                 <input
-                  type="cpassword"
+                  type="password"
                   value={credentials.cpassword}
                   onChange={onChange}
                   className="form-control"
