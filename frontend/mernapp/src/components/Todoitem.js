@@ -14,6 +14,7 @@ function Todoitem(props) {
       <td>{todo.title}</td>
       <td>{todo.task}</td>
       <td><input type="checkbox" className="form-check-input" id="isComplete" checked={todo.isComplete==="true"} onChange={()=>{console.log("ok")}}  /></td>
+      <td>{new Date(todo.date).toLocaleDateString()}</td>
       <td><i className="far fa-edit mx-2" onClick={()=>{updateTodo(todo)}} ></i></td>
       <td><i className="far fa-trash-alt mx-2" onClick={()=>{deleteTodo(todo._id)}} ></i></td>
     </tr>

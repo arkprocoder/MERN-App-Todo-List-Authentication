@@ -53,6 +53,7 @@ const Todos = () => {
             <th scope="col">Title</th>
             <th scope="col">Task</th>
             <th scope="col">IsCompleted</th>
+            <th scope="col">Date</th>
             <th scope="col">Update</th>
             <th scope="col">delete</th>
           </tr>
