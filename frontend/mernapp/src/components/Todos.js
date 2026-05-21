@@ -133,12 +133,12 @@ const Todos = () => {
                     <input
                       className="form-check-input"
                       type="radio"
-                      id="isComplete"
+                      id="isCompleteYes"
                       value="true"
                       name="eisComplete"
                       onChange={onChange}
                     />
-                    <label className="form-check-label" htmlFor="isComplete">
+                    <label className="form-check-label" htmlFor="isCompleteYes">
                       Yes
                     </label>
                   </div>
@@ -146,12 +146,12 @@ const Todos = () => {
                     <input
                       className="form-check-input"
                       type="radio"
-                      id="isComplete"
+                      id="isCompleteNo"
                       value="false"
                       name="eisComplete"
                       onChange={onChange}
                     />
-                    <label className="form-check-label" htmlFor="isComplete">
+                    <label className="form-check-label" htmlFor="isCompleteNo">
                       No
                     </label>
                   </div>

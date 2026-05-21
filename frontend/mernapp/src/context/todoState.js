@@ -84,7 +84,7 @@ const TodoState=(props)=>{
         "auth-token": localStorage.getItem('token')
       }
     });
-    const json = response.json(); 
+    const json = await response.json(); 
     const newTodos = todos.filter((todo) => { return todo._id !== id })
     setTodo(newTodos)
     props.showAlert("Todo Deleted","danger")
